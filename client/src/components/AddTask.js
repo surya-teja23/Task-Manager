@@ -43,7 +43,7 @@ export default function AddTask() {
         description: taskDescription,
       };
 
-      let response = await fetch(`http://localhost:3500/tasks`, {
+      let response = await fetch(`https://task-manager-y9np.onrender.com/tasks`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(task),
