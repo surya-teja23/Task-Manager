@@ -10,7 +10,7 @@ export default function ContextProvider( {children } ) {
   
   const getTasks = async () => {
     try {
-      let response = await fetch('http://localhost:3500/tasks')
+      let response = await fetch('https://task-manager-y9np.onrender.com/tasks')
       if (!response.ok) throw Error("Failed to fetch data")
 
       let data = await response.json()
