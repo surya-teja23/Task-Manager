@@ -19,7 +19,7 @@ export default function ToggleTask({ task }) {
   async function toggleTask(id) {
     setToggleModalOpen(true);
     try {
-      let response = await fetch(`http://localhost:3500/tasks/${id}`, {
+      let response = await fetch(`https://task-manager-y9np.onrender.com/tasks/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: !task.status }),
